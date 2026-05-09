@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NoveltyReport",
+  "type": "object",
+  "required": [
+    "query",
+    "risk_level",
+    "nearest_works",
+    "limitations"
+  ],
+  "properties": {
+    "query": {
+      "type": "string"
+    },
+    "risk_level": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "unknown"
+      ]
+    },
+    "nearest_works": {
+      "type": "array"
+    },
+    "risky_phrases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "safe_phrasing": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

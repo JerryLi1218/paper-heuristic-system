@@ -1,0 +1,36 @@
+{
+  "name": "paper-heuristic-system",
+  "version": "0.2.0",
+  "description": "A reusable Codex skill and CLI for iterative paper revision, citation verification, novelty risk mapping, and project-local Paper-HS state management.",
+  "author": {
+    "name": "Paper-HS contributors"
+  },
+  "repository": "https://github.com/JerryLi1218/paper-heuristic-system",
+  "license": "MIT",
+  "keywords": [
+    "research",
+    "paper",
+    "latex",
+    "citation",
+    "bibtex",
+    "novelty",
+    "codex-skills"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Paper Heuristic System",
+    "shortDescription": "Iterative paper revision with citation and novelty guardrails.",
+    "longDescription": "Maintain a manuscript as a Paper-Heuristic System: claim graph, evidence ledger, source cards, novelty map, citation verification, revision trials, regression checks, memory compression, and meta-skill optimization.",
+    "developerName": "Paper-HS contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use paper_heuristic_system to ingest this paper and audit citations before revising.",
+      "Use paper_heuristic_system to check whether this idea is novel enough and whether the claims are submission-ready.",
+      "Use paper_heuristic_system to revise this manuscript with source-card and BibTeX verification."
+    ]
+  }
+}

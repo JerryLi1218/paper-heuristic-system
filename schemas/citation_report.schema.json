@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CitationReport",
+  "type": "object",
+  "required": [
+    "summary",
+    "issues"
+  ],
+  "properties": {
+    "summary": {
+      "type": "object"
+    },
+    "issues": {
+      "type": "array"
+    },
+    "entries": {
+      "type": "array"
+    }
+  }
+}

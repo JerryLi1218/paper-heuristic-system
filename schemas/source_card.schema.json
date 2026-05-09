@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SourceCard",
+  "type": "object",
+  "required": [
+    "source_id",
+    "bib_key",
+    "title",
+    "usage",
+    "verification_status"
+  ],
+  "properties": {
+    "source_id": {
+      "type": "string"
+    },
+    "bib_key": {
+      "type": "string"
+    },
+    "doi": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "year": {
+      "type": [
+        "integer",
+        "string"
+      ]
+    },
+    "usage": {
+      "type": "string"
+    },
+    "supports_claims": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "verification_status": {
+      "enum": [
+        "unverified",
+        "verified",
+        "mismatch",
+        "needs_human_gate"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    },
+    "canonical_id": {
+      "type": "string"
+    },
+    "arxiv": {
+      "type": "string"
+    }
+  }
+}

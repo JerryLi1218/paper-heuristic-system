@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+dist/
+build/
+
+# Local paper workspaces
+workspace/
+.paper_hs_cache/
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Generated example reports
+examples/**/paper_hs/reports/*
+!examples/**/paper_hs/reports/.gitkeep

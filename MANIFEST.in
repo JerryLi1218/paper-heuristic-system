@@ -1,0 +1,8 @@
+include README.md README.zh-CN.md QUICKSTART.md LICENSE
+recursive-include .agents/skills/paper_heuristic_system *
+recursive-include templates *
+recursive-include src/paper_hs/resources *
+recursive-include docs *
+recursive-include schemas *
+include setup.py
+recursive-include skills *

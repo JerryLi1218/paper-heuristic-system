@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -e .
+      - run: python -m unittest discover tests
+      - run: paper-hs --help
+      - run: paper-hs source-cards --project examples/minimal_latex --overwrite
+      - run: paper-hs cite-check --project examples/minimal_latex --fail-on-error
+      - run: paper-hs verify --project examples/minimal_latex --query "paper revision as a heuristic system with claim evidence citation state" --fail-on-error
