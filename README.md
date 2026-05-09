@@ -140,6 +140,12 @@ paper-b/
 
 Do not share `state/`, `memory/`, `runs/`, or `reports/` between papers. Only the repository template and skill definition are reusable.
 
+## Inspiration and acknowledgement
+
+Paper-HS was created after reading Jiayi Weng's essay [Learning Beyond Gradients](https://trinkle23897.github.io/learning-beyond-gradients/). The essay frames Heuristic Learning as a way for coding agents to maintain software systems that absorb feedback, keep explicit memory, run regression checks, and improve through code edits. Paper-HS adapts that system view to manuscript revision: the maintained object is a paper project with claims, evidence, citations, reviewer issues, memory, and verification reports.
+
+If this repository helps your work, please also credit Weng's original article when discussing the broader Heuristic Learning / Heuristic System framing.
+
 ## Repository layout
 
 ```text

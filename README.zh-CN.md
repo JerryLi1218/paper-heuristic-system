@@ -105,6 +105,12 @@ paper-b/
 
 可以共享 repo、模板、schema、CLI 和总 skill；不要共享 claim graph、evidence ledger、reviewer issues、memory、failed directions、runs 或 response matrix。
 
+## 灵感来源与致谢
+
+Paper-HS 的创建受到 Jiayi Weng 的文章 [Learning Beyond Gradients](https://trinkle23897.github.io/learning-beyond-gradients/) 启发。那篇文章把 Heuristic Learning 描述为一种由 coding agent 维护的软件系统：系统吸收反馈，保留显式记忆，运行回归检查，并通过代码修改持续改进。Paper-HS 把这一路径迁移到论文修改场景中，把被维护的对象定义为包含 claims、evidence、citations、reviewer issues、memory 与 verification reports 的论文项目。
+
+如果你在介绍或复用这个仓库时讨论 Heuristic Learning / Heuristic System 的整体框架，请同时引用并致谢 Weng 的原文。
+
 ## 重要边界
 
 Paper-HS 可以帮助发现 prior art、核验引用、降低说法风险，但不能数学式证明 idea 一定新颖，也不能替代作者对真实贡献的判断。系统必须停止在建议层，而不是编造实验、引用、定理、审稿意图或作者意图。
