@@ -12,6 +12,7 @@ It is built for researchers who already have a paper draft and want an agent-ass
 - run regression checks after every patch;
 - verify citations and BibTeX metadata;
 - map prior work around an idea before asserting novelty;
+- launch long-running Codex `/goal` review iterations with a human-gate checkpoint;
 - keep every paper project isolated so memory from one paper does not pollute another.
 
 The repository includes a **single plug-and-play Codex skill**, an optional Codex plugin manifest, and a small Python CLI. You can use the skill alone, the CLI alone, or both together.
@@ -72,6 +73,14 @@ paper_hs/runs/<run_id>/patch.diff
 paper_hs/runs/<run_id>/regression_report.md
 paper_hs/runs/<run_id>/revision_trial.json
 ```
+
+## Auto prompts
+
+The `auto-prompts/` directory contains copyable long-task prompts for Codex and other agent tools. The first prompt, [`auto-prompts/review-iteration-goal.md`](auto-prompts/review-iteration-goal.md), turns a score sheet or revision memo into a staged Paper-HS workflow:
+
+1. decompose feedback into reviewer issues;
+2. produce `paper_hs/reports/human_gate_review.md` and stop for author confirmation;
+3. after confirmation, run unattended Paper-HS iteration until all actionable issues are resolved, bounded, or blocked by missing evidence.
 
 ## Citation and novelty verification
 
@@ -150,6 +159,7 @@ If this repository helps your work, please also credit Weng's original article w
 
 ```text
 .agents/skills/paper_heuristic_system/   # Plug-and-play Codex skill
+auto-prompts/                            # Copyable /goal prompts for long agent tasks
 src/paper_hs/                            # Python CLI and verification logic
 templates/paper_project/                 # Isolated project skeleton
 examples/minimal_latex/                  # Tiny example paper

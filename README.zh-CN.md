@@ -25,6 +25,7 @@ manuscript
 4. **引用核验**：检查 `.tex` citation key、`.bib` 条目、DOI/title/year/author 一致性、重复 DOI、缺失引用和 source card。
 5. **新颖性与投稿风险图谱**：用 OpenAlex / Crossref / Semantic Scholar / arXiv 元数据检索近邻工作，输出 prior-art map、novelty risk、危险说法和安全改写建议。
 6. **Meta Skill Optimizer**：把 skills 自身也作为 Heuristic System 维护，把反复失败转化为 skill patch、schema patch 或 golden tests。
+7. **Auto Prompts**：提供可直接复制到 Codex `/goal` 的长任务模板，把评分表和修改意见转成带人工核验暂停点的 Paper-HS 全流程迭代。
 
 ## 快速开始
 
@@ -88,6 +89,14 @@ related work 是否漏掉关键近邻？
 “novel / first / SOTA / solves” 这类说法是否过强？
 正文 citation key 对了，但 .bib 的 DOI/title/year/author 是否写错？
 ```
+
+## Auto Prompts
+
+`auto-prompts/` 目录保存可复制的长任务 prompt。当前新增的 [`auto-prompts/review-iteration-goal.md`](auto-prompts/review-iteration-goal.md) 用于把评分表、审稿意见或修改建议转成一次 Codex `/goal` 长任务：
+
+1. 先把反馈拆解成多粒度 reviewer issues；
+2. 生成 `paper_hs/reports/human_gate_review.md` 并暂停，等待作者确认必须人工判断的方向；
+3. 确认后进入无人值守 Paper-HS 迭代，直到所有可处理意见被解决、保守收束或标记为缺少证据。
 
 ## 项目隔离原则
 
